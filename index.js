@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fetchBooks = () => (
  fetch('https://anapioficeandfire.com/api/books')
   .then(res => res.json())
@@ -6,6 +7,16 @@ const fetchBooks = () => (
 
 
 const renderBooks = (books) => {
+=======
+const fetchBooks = () => {
+fetch('https://anapioficeandfire.com/api/books')
+  .then(res => res.json())
+  .then(json => renderBooks(json));
+}
+
+
+function renderBooks(books) {
+>>>>>>> b155ca3a162255cf14485a7e24a64c5d59c60799
   const main = document.querySelector('main')
   books.forEach(book => {
     const h2 = document.createElement('h2')
